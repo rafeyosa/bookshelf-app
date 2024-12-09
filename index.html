@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshelf App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Bookshelf App</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Tambah Buku Baru</h2>
+      <form id="bookForm" data-testid="bookForm">
+        <div>
+          <label for="bookFormTitle">Judul</label>
+          <input id="bookFormTitle" type="text" placeholder="Masukkan judul buku" required
+            data-testid="bookFormTitleInput" />
+        </div>
+        <div>
+          <label for="bookFormAuthor">Penulis</label>
+          <input id="bookFormAuthor" type="text" placeholder="Masukkan nama penulis" required
+            data-testid="bookFormAuthorInput" />
+        </div>
+        <div>
+          <label for="bookFormYear">Tahun</label>
+          <input id="bookFormYear" type="text" inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="4" placeholder="Masukkan tahun terbit"
+            required data-testid="bookFormYearInput" />
+        </div>
+        <div>
+          <label for="bookFormIsComplete">
+            <input id="bookFormIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" />Selesai
+            dibaca</label>
+        </div>
+        <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+          Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+        </button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Cari Buku</h2>
+      <form id="searchBook" data-testid="searchBookForm">
+        <input id="searchBookTitle" type="text" placeholder="Judul buku" data-testid="searchBookFormTitleInput"
+          required />
+        <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+          Cari
+        </button>
+      </form>
+      <button id="clearSearch" disabled>Hapus Pencarian</button>
+    </section>
+
+    <section>
+      <h2>Belum selesai dibaca</h2>
+      <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+    </section>
+
+    <section>
+      <h2>Selesai dibaca</h2>
+      <div id="completeBookList" data-testid="completeBookList"></div>
+    </section>
+  </main>
+
+  <div id="editBookPopUp" class="popup" style="display: none;">
+    <div class="popup-content">
+      <h3>Edit Buku</h3>
+      <form id="editBookForm">
+        <div>
+          <label for="editBookTitle">Judul</label>
+          <input id="editBookTitle" type="text" placeholder="Masukkan judul baru" required />
+        </div>
+        <div>
+          <label for="editBookAuthor">Penulis</label>
+          <input id="editBookAuthor" type="text" placeholder="Masukkan nama penulis baru" required />
+        </div>
+        <div>
+          <label for="editBookYear">Tahun</label>
+          <input id="editBookYear" type="text" inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="4"
+            placeholder="Masukkan tahun terbit baru" required />
+        </div>
+        <div class="popup-actions">
+          <button id="editBookSubmit" type="submit">Simpan</button>
+          <button id="editBookCancel" type="button">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
