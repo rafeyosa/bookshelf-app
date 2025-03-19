@@ -1,6 +1,6 @@
 # Bookshelf App for Dicoding Submission Project
 
-This is a starter project for students working on their final assignment for the [Beginner Front-End Web Development](https://www.dicoding.com/academies/315) class.
+This is a starter project for students working on their final assignment for the [Front-End Web Programming for Beginner](https://www.dicoding.com/academies/315) class.
 
 ## Assignment Submission Guidelines  
 
