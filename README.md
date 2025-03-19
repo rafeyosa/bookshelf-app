@@ -1,6 +1,6 @@
-# Bookshelf App Starter Project
+# Bookshelf App for Dicoding Submission Project
 
-Ini adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas Belajar Membuat Front-End Web untuk Pemula.
+Ini adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas [Belajar Membuat Front-End Web untuk Pemula](https://www.dicoding.com/academies/315).
 
 ## Ketentuan Pengerjaan Tugas
 
@@ -36,3 +36,7 @@ Untuk mempermudah penilaian submission yang dikirim, Anda perlu memahami ketentu
 ```
 
 Selamat mengerjakan dan sukses selalu!
+
+## Result
+![image](https://github.com/user-attachments/assets/246c5068-a151-4f82-a22f-4a13dd9ec449)
+
