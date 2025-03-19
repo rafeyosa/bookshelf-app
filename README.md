@@ -1,42 +1,39 @@
 # Bookshelf App for Dicoding Submission Project
 
-Ini adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas [Belajar Membuat Front-End Web untuk Pemula](https://www.dicoding.com/academies/315).
+This is a starter project for students working on their final assignment for the [Beginner Front-End Web Development](https://www.dicoding.com/academies/315) class.
 
-## Ketentuan Pengerjaan Tugas
+## Assignment Submission Guidelines  
 
-Untuk mempermudah penilaian submission yang dikirim, Anda perlu memahami ketentuan-ketentuan berikut dalam mengerjakan tugas ini.
+To facilitate the evaluation of your submission, please follow these guidelines when working on this assignment:  
 
-- Anda dilarang mengedit atau menghapus atribut `data-testid` pada elemen-elemen HTML.
-- Ini masih berkaitan dengan poin sebelumnya. Jika Anda memiliki kebutuhan seperti styling elemen dan perlu menambahkan atribut seperti class, itu tidak dilarang selama atribut `data-testid` beserta nilainya tidak diubah atau dihapus.
-- Dalam menampilkan data-data buku, Anda wajib memberikan beberapa atribut pada setiap elemennya.
+- Do **not** edit or remove the `data-testid` attribute from any HTML elements.  
+- Related to the previous point, if you need to style an element and want to add attributes like `class`, you are allowed to do so **as long as the `data-testid` attributes and their values remain unchanged**.  
+- When displaying book data, you **must** include specific attributes for each element:  
 
-  - `data-bookid`: menampung nilai ID masing-masing buku.
-  - `data-testid`: penanda jenis data buku yang ditampilkan. Berikut daftarnya.
-    - `bookItem`: elemen kontainer yang menampung data-data buku.
-    - `bookItemTitle`: judul buku
-    - `bookItemAuthor`: penulis buku
-    - `bookItemYear`: tahun rilis buku
-    - `bookItemIsCompleteButton`: tombol untuk mengubah kondisi buku dari “Belum selesai dibaca” menjadi “Selesai dibaca” atau sebaliknya.
-    - `bookItemDeleteButton`: tombol untuk menghapus buku.
-    - `bookItemEditButton`: tombol untuk mengubah data buku.
+  - **`data-bookid`**: Stores the unique ID of each book.  
+  - **`data-testid`**: Identifies the type of book data being displayed. Below is the list of required identifiers:  
+    - **`bookItem`**: The container element holding book data.  
+    - **`bookItemTitle`**: The book's title.  
+    - **`bookItemAuthor`**: The author's name.  
+    - **`bookItemYear`**: The book's release year.  
+    - **`bookItemIsCompleteButton`**: A button to change the book's status between "Not Finished Reading" and "Finished Reading."  
+    - **`bookItemDeleteButton`**: A button to delete the book.  
+    - **`bookItemEditButton`**: A button to edit the book details.  
 
-  Agar pengerjaan tugas lebih mudah, Anda dapat mengikuti templat buku berikut.
+To simplify the assignment, you can follow the book template below:  
 
 ```html
-<div data-bookid="{{ ID_buku }}" data-testid="bookItem">
-  <h3 data-testid="bookItemTitle">{{ judul_buku }}</h3>
-  <p data-testid="bookItemAuthor">Penulis: {{ penulis_buku }}</p>
-  <p data-testid="bookItemYear">Tahun: {{ tahun_rilis_buku }}</p>
+<div data-bookid="{{ book_ID }}" data-testid="bookItem">
+  <h3 data-testid="bookItemTitle">{{ book_title }}</h3>
+  <p data-testid="bookItemAuthor">Author: {{ book_author }}</p>
+  <p data-testid="bookItemYear">Year: {{ book_year }}</p>
   <div>
-    <button data-testid="bookItemIsCompleteButton">{{ tombol_untuk_ubah_kondisi }}</button>
-    <button data-testid="bookItemDeleteButton">{{ tombol_untuk_hapus }}</button>
-    <button data-testid="bookItemEditButton">{{ tombol_untuk_edit }}</button>
+    <button data-testid="bookItemIsCompleteButton">{{ status_toggle_button }}</button>
+    <button data-testid="bookItemDeleteButton">{{ delete_button }}</button>
+    <button data-testid="bookItemEditButton">{{ edit_button }}</button>
   </div>
 </div>
 ```
 
-Selamat mengerjakan dan sukses selalu!
-
 ## Result
 ![image](https://github.com/user-attachments/assets/246c5068-a151-4f82-a22f-4a13dd9ec449)
-
